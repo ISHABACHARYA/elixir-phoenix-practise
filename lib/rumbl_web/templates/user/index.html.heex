@@ -1,0 +1,8 @@
+<table>
+     <%= for user <- @users  do %> 
+     <tr>
+    <th> <%= first_name(user) %> </th>
+    <th><%= link "view", to: Routes.user_path(@conn, :show, user.id) %> </th>
+    </tr>
+    <% end %>
+</table>
